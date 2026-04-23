@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="xyz"> Hello Guys </p>
+
+    <p id="abc"> web development</p>
+
+   <div class="myclass">AI development - 0</div>
+
+   <div class="myclass">ML development - 1</div>
+
+   <p>Plain simple Paragraph Tag</p>
+
+   <div class="box">Module 1</div>
+   <div class="box">Module 2</div>
+
+
+   <ul id="data">
+
+   </ul>
+
+  <script>
+     
+   //1.getElementById("Id Name Value")
+   var ele = document.getElementById("xyz")
+   console.log(ele)
+
+
+   var ele1 = document.getElementById("abc")
+   console.log(ele1)
+
+   console.log(ele1.textContent)
+
+    //2.getElementByClassName
+
+   var ele2 = document.getElementsByClassName("myclass")
+   console.log(ele2)
+
+   console.log(ele2[1])
+   console.log(ele2[1].textContent)
+
+    //3. Tag without ID and class
+
+    var ele3 = document.getElementsByTagName("p")
+    console.log(ele3)
+    console.log(ele3[2])
+    console.log(ele3[2].textContent)
+
+    //4. QuerySelector
+      
+    const xyz = document.querySelector(".box")
+    console.log(xyz);
+
+
+         //querySelectorAll
+
+    const pqr = document.querySelectorAll(".box")
+    console.log(pqr)
+    console.log(pqr[0].textContent)
+
+
+
+   const ul = document.getElementById("data")
+          //CreateElement - li tag
+   const list=  document.createElement("li")
+   list.textContent = "water"
+   
+   ul.appendChild(list)
+
+
+
+  </script>
+
+</body>
+</html>
