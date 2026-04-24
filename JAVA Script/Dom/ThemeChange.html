@@ -6,20 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="btn" onclick="Theme()">🌙</button>
+    <button id="btn" onclick="Theme()">🌞</button>
 
 
     <script>
     function Theme(){
      const button = document.getElementById("btn")
 
-     button.textContent ="🌞"
+    
 
 
-      //select Entire Webpage  - body tag
-     document.body.style.backgroundColor = "black"
-    
-    
+    //select Entire Webpage  - body tag
+     if(document.body.style.backgroundColor === "black"){
+        document.body.style.backgroundColor = "white";
+        button.textContent ="🌞"
+     }else{
+        document.body.style.backgroundColor = "black";
+        button.textContent="🌙"
+     }
     }
     </script>
 </body>
